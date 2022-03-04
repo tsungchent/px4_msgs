@@ -62,6 +62,12 @@ if(NOT "${PX4_MSGS}" STREQUAL "")
     add_executable(idl_target ${MSGS_DIR}/idl.cc)
     add_dependencies(idl_target ${PROJECT_NAME}__fastrtps_idl)
   endif()
+  
+  # Install header files
+  install(DIRECTORY include/${PROJECT_NAME}/
+      DESTINATION include/${PROJECT_NAME}
+  )
+
 else()
   message(FATAL_ERROR "No PX4 msgs found to generate interfaces to!")
 endif()
