@@ -64,9 +64,9 @@ if(NOT "${PX4_MSGS}" STREQUAL "")
   endif()
   
   # Install header files
-  install(DIRECTORY include/${PROJECT_NAME}/
-      DESTINATION include/${PROJECT_NAME}
-  )
+  #install(DIRECTORY include/${PROJECT_NAME}/
+  #    DESTINATION include/${PROJECT_NAME}
+  #)
 
 else()
   message(FATAL_ERROR "No PX4 msgs found to generate interfaces to!")
